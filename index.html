@@ -20,16 +20,14 @@
 
 <body>
   <center>
-<!-- Modal -->
 <div id="myModal" class="modal fade">
   <div class="modal-content">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal">&times;</button>
-      <h4 class="modal-title">Sketches</h4>
+      <h4 class="modal-title">Sketchs</h4>
     </div>
 
     <div class="modal-body">
-      <h3 id="sh">Sketches</h3>
       <img src="sketch1.png">
       <img src="sketch2.png">
     </div>
@@ -37,18 +35,16 @@
   </div>
 </div>
 
-<h1 id="header">Quick Draw
+<h1>Quick Draw
 <button id="show_sketch" class="btn btn-info" data-toggle="modal" data-target="#myModal">Show Sketch</button>
   </h1>
-  <p id="yoursketch">Your Sketch : </label></p>
-  <p id="confidence">Accuracy : </label></p>
-  <p id="drawn">Sketch to be Drawn : </label></p>
-
-  <span id="score">Score :</span>
-  <span id="timer">Time Remaining :</span>
-
-  <button class="btn btn-danger btn-lg clear" onclick="clearCanvas()" style="margin-top: 350px; margin-left: 130px;">Clear Canvas</button>
+  <p id="label">Your Sketch : </p>
+  <p id="confidence">Confidence : </p>   
+  <p id="sketch_name">Sketch To be Drawn: </p>  
 </center> 
+
+  <span id="score">Score : </span>   
+  <span id="time">Timer : </span>
 
 <script src="main.js"></script>
 </body>
