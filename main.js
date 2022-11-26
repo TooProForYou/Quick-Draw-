@@ -30,9 +30,13 @@ function setup() {
   canvas.mouseReleased(classifyCanvas);
 }
 
+
 function draw() {
+  // Set stroke weight to 10
   strokeWeight(13);
+  // Set stroke color to black
   stroke(0);
+  // If mouse is pressed, draw line between previous and current mouse positions
   if (mouseIsPressed) {
     line(pmouseX, pmouseY, mouseX, mouseY);
   }
@@ -40,7 +44,7 @@ function draw() {
   check_sketch()
   if(drawn_sketch == sketch)
   {
-    answer_holder = "set";
+    answer_holder = "set"
     score++;
     document.getElementById('score').innerHTML = 'Score: ' + score;
   }
@@ -62,15 +66,16 @@ function gotResult(error, results) {
   document.getElementById('confidence').innerHTML = 'Confidence: ' + Math.round(results[0].confidence * 100) + '%';
 }
 
+
 function check_sketch()
 {
   timer_counter++;
   document.getElementById('time').innerHTML = 'Timer: ' + timer_counter;
-  console.log(timer_counter);
+  console.log(timer_counter)
   if(timer_counter > 400)
     {
       timer_counter = 0;
-      timer_check = "completed";
+      timer_check = "completed"
     }
     if(timer_check =="completed" || answer_holder == "set")
     {
@@ -78,4 +83,6 @@ function check_sketch()
       answer_holder = "";
       updateCanvas();
     }
+
 }
+
